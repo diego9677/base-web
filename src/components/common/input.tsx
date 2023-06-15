@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-type TypeValue =
-  | { type: 'text' | 'email' | 'password' | 'time'; value?: string; }
-  | { type: 'number', value?: number; };
+// type TypeValue =
+//   | { type: 'text' | 'email' | 'password' | 'time'; value?: string; }
+//   | { type: 'number', value?: number; };
 
 type Props = {
   onChange: React.ChangeEventHandler<HTMLInputElement>;
@@ -12,7 +12,9 @@ type Props = {
   error?: string;
   autoComplete?: string;
   step?: string | number;
-} & TypeValue;
+  value?: string | number;
+  type: React.HTMLInputTypeAttribute;
+};
 
 export const Input = ({ id, placeholder, label, error, autoComplete, step, type, value, onChange }: Props) => {
   const [show, setShow] = useState(false);
@@ -32,7 +34,7 @@ export const Input = ({ id, placeholder, label, error, autoComplete, step, type,
       <div className="relative flex items-center">
         <input
           id={id}
-          className="text-base bg-white border border-gray-200 rounded-md w-full py-2 px-4 text-gray-700 leading-tight outline-none focus:border-2 focus:border-blue-500"
+          className="text-base bg-white ring-1 ring-gray-200 rounded-md w-full py-2 px-4 text-gray-700 leading-tight outline-none focus:ring-2 focus:ring-blue-500"
           type={setType()}
           value={value}
           onChange={onChange}
