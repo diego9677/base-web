@@ -24,3 +24,13 @@ export interface Equipo {
   fechaFundacion: string;
   escudo: string;
 }
+
+export interface Posicion {
+  id: number;
+  partidosJugados: number;
+  golesAFavor: number;
+  golesEnContra: number;
+  puntos: number;
+  equipoId: number;
+  equipo: Equipo;
+}

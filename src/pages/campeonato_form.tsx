@@ -1,6 +1,6 @@
 import dayjs from "dayjs";
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import { Button } from "../components/common/button";
 import { Input } from "../components/common/input";
 import { MultiSelectCompare } from "../components/common/multi_select_compare";
@@ -98,7 +98,7 @@ export const CampeonatoForm = () => {
   }
 
   return (
-    <form className="mx-auto w-1/3 flex flex-col gap-6" onSubmit={onSubmit}>
+    <form className="mx-auto w-1/2 flex flex-col gap-6 h-full overflow-auto px-4" onSubmit={onSubmit}>
       <h3 className="text-lg font-medium text-gray-800">Nuevo Campeonato</h3>
       <Input
         type="text"
