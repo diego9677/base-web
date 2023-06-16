@@ -1,6 +1,6 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 import { MainLayout } from "./layouts/MainLayout";
-import { Campeonato } from "./pages/campeonato";
+import { Campeonatos } from "./pages/campeonatos";
 import { CampeonatoForm } from "./pages/campeonato_form";
 import { Cronograma } from "./pages/cronograma";
 import { Home } from "./pages/home";
@@ -15,35 +15,35 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/home"
         element={
-          <MainLayout>
+          <MainLayout title="Home">
             <Home />
           </MainLayout>
         }
       />
       <Route path="/campeonato"
         element={
-          <MainLayout>
-            <Campeonato />
+          <MainLayout title="Campeonatos">
+            <Campeonatos />
           </MainLayout>
         }
       />
       <Route path="/campeonato-form"
         element={
-          <MainLayout>
+          <MainLayout title="Campeonato">
             <CampeonatoForm />
           </MainLayout>
         }
       />
       <Route path="/cronograma"
         element={
-          <MainLayout>
+          <MainLayout title="Cronograma de Partidos">
             <Cronograma />
           </MainLayout>
         }
       />
       <Route path="/posiciones"
         element={
-          <MainLayout>
+          <MainLayout title="Tabla de posiciones">
             <Posiciones />
           </MainLayout>
         }

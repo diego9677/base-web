@@ -2,6 +2,9 @@
 export interface Campeonato {
   id: number;
   nombre: string;
+  categoriaId: number;
+  fechaInicio: string;
+  fechaFin: string;
   categoria: Categoria;
   equipos: Equipo[];
 }
