@@ -15,9 +15,9 @@ export const MainLayout = ({ title, children }: Props) => {
       <section className="col-span-2 bg-gray-900">
         <h1 className="text-2xl font-semibold text-white text-center my-5">InterBarrios</h1>
         <div className="flex flex-col">
-          <Link to="/home" className={clsx("p-4 font-medium text-base text-gray-300 hover:text-white hover:bg-blue-500", location.pathname.includes('home') && "bg-blue-500 text-white")}>
+          {/* <Link to="/home" className={clsx("p-4 font-medium text-base text-gray-300 hover:text-white hover:bg-blue-500", location.pathname.includes('home') && "bg-blue-500 text-white")}>
             Home
-          </Link>
+          </Link> */}
           <Link to="/campeonato" className={clsx("p-4 font-medium text-base text-gray-300 hover:text-white hover:bg-blue-500", location.pathname.includes('campeonato') && "bg-blue-500 text-white")}>
             Campeonatos
           </Link>
